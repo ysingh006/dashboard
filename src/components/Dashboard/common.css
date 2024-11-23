@@ -1,0 +1,139 @@
+.dashboard-container {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 3.5rem);
+    background-color: #fff; 
+    color: #000; 
+    width: 100vw;
+  }
+  
+  
+  .content {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .content-wrapper {
+    margin: auto;
+    height: 100vh;
+    overflow: auto;
+  }
+  
+
+
+
+
+
+
+/* sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  background-color: #0a131e;
+  padding-top: 1.6rem;
+  padding-bottom: 2.5rem;
+  position: relative; 
+  transition: min-width 0.3s;
+}
+
+
+.sidebar.minimized {
+  min-width: 60px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+
+
+.toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #D1D5DB; 
+  margin: 0;
+  padding: 0.5rem; 
+  position: absolute; 
+  bottom: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+
+
+.hello{
+  font-size: 20px;
+  font-weight: 600;
+  color: #f97604;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+
+
+
+
+/* sidebarLink */
+  .sidebar-link {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem; 
+    font-weight: 500; 
+    transition: background-color 0.3s;
+    color: #fff;
+  }
+  
+  .sidebar-link:hover{
+    text-decoration: none;
+  }
+  
+  .sidebar-link.active {
+    background-color: #462da1; 
+  }
+  
+  .sidebar-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #6a79c4;
+    opacity: 1;
+  }
+  
+  .sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #fef08a;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .sidebar-link-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  
+  .sidebar-link-container span {
+    display: inline; 
+  }
+  
+  .sidebar-link-container.minimized span {
+    display: none; 
+  }
+  
+ .text-lg{
+  font-size: 21px;
+ }
